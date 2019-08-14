@@ -1,21 +1,26 @@
 package begin;
 
 public class Rectangle {
-    private double rectangleSideA;
-    private double rectangleSideB;
+    protected double lengthSideA;
+    protected double lengthSideB;
 
-    Rectangle(double rectangleSideA, double rectangleSideB) {
-        if (rectangleSideA < 0.0 || rectangleSideB < 0.0)
+    public Rectangle() {
+    }
+
+    ;
+
+    public Rectangle(double lengthSideA, double lengthSideB) {
+        if (lengthSideA < 0.0 || lengthSideB < 0.0)
             throw new RuntimeException("Error. Rectangle side < 0.");
-        this.rectangleSideA = rectangleSideA;
-        this.rectangleSideB = rectangleSideB;
+        this.lengthSideA = lengthSideA;
+        this.lengthSideB = lengthSideB;
     }
 
     public double getArea() {
-        return this.rectangleSideA * this.rectangleSideB;
+        return this.lengthSideA * this.lengthSideB;
     }
 
     public double getPerimeter() {
-        return this.rectangleSideA * 2 + this.rectangleSideB * 2;
+        return this.lengthSideA * 2 + this.lengthSideB * 2;
     }
 }
